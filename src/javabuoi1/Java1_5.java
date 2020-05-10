@@ -1,4 +1,4 @@
-package java2904;
+package javabuoi1;
 
 import java.util.Scanner;
 import java.lang.String;

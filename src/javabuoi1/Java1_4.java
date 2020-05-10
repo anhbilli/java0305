@@ -1,4 +1,4 @@
-package java2904;
+package javabuoi1;
 import java.util.Scanner;
 public class Java1_4 {
     public static void main(String[] args){

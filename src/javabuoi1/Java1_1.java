@@ -1,4 +1,4 @@
-package java2904;
+package javabuoi1;
 
 public class Java1_1 {
     public static void main(String[] args){
