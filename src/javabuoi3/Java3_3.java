@@ -22,14 +22,14 @@ public class Java3_3 {
             System.out.print(a[i] + " ");
         }
         //Tinh trung binh cong cac so le o vi tri chan
-        int avg = 0;
+        /*int avg = 0;
         for (int i = 0; i < n; i++){
             if(a[i] % 2 != 0 && (i+1) % 2 == 0){
                 int j = a.length();
                 avg += a[i]/j;
             }
         }
-        System.out.println("Trung binh cong: "+avg);
+        System.out.println("Trung binh cong: "+avg);*/
 
         //Phan tu lon nhat trong mang
         int maxValue = a[0];
