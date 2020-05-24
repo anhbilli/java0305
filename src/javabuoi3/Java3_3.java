@@ -8,7 +8,7 @@ public class Java3_3 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap vao so phan tu cua mang: ");
         int n = sc.nextInt();
-        //Khai bao mang a kieu so nguoi vs 10 phan tu
+        //Khai bao mang a kieu so nguyen vs 10 phan tu
         int[] a = new int[n];
 
         //Dung vong lap for de nhap DL
@@ -21,33 +21,60 @@ public class Java3_3 {
         for(int i = 0; i < n; i++) {
             System.out.print(a[i] + " ");
         }
-        //Tinh trung binh cong cac so le o vi tri chan
-        /*int avg = 0;
+        //1.Tinh trung binh cong cac so le o vi tri chan
+        int avg = 0;
+        int m = 0;
         for (int i = 0; i < n; i++){
             if(a[i] % 2 != 0 && (i+1) % 2 == 0){
-                int j = a.length();
-                avg += a[i]/j;
+                avg += a[i];
+                m++;
             }
         }
-        System.out.println("Trung binh cong: "+avg);*/
+        float avg2 = avg/m;
 
-        //Phan tu lon nhat trong mang
-        int maxValue = a[0];
+        System.out.println("Trung binh cong: "+avg2);
+
+        //2.Phan tu lon nhat trong mang
+        int maxValue = 0;
         for(int i = 0; i < n;i++){
-            if(a[i] > maxValue){
+            for (int j = 0; j < n;j++){
+                if(a[i] > maxValue) {
                 maxValue = a[i];
+                a[i] = a[j];
+                a[j] = maxValue;
+                }
             }
         }
         System.out.println("Phan tu lon nhat la: "+maxValue);
 
-        //Vi tri so nho nhat trong mang
-       /* int minValue = a[0];
+        //3.Vi tri so nho nhat trong mang
+       int minA = a[0];
+       int minIndex = 0;
         for(int i = 0; i < n; i++){
-            if(a[i] < minValue){
-                minValue = a[i];
+               if(a[i] < minA) {
+                   minA = a[i];
+                   minIndex = i;
+               }
+        }
+        System.out.println("Vi tri so nho nhat trong mang: "+minIndex);
+
+
+        //8.Sap xep mang theo thu tu giam dan
+        System.out.println("Mang theo thu tu giam dan: ");
+        int giamDan;
+        for(int i = 0; i < a.length; i++){
+            for(int j = 0; j < a.length; j++){
+                if(a[i] > a[j]){
+                    giamDan = a[i];
+                    a[i] = a[j];
+                    a[j] = giamDan;
+
+                }
             }
         }
-        System.out.println(minValue.length);*/
+        for(int b : a) {
+            System.out.print(b+ " ");
+        }
 
     }
 }
