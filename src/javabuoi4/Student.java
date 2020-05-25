@@ -1,32 +1,14 @@
 package javabuoi4;
 
 public class Student {
-    //Tinh dong goi
     private String name;
-    private int age;
-    private String add;
-    private float diem;
-    private String gender;
+    private float gpa;
 
-    //Contructor co tham so
-    public Student(String name, int age, String add, float diem, String gender) {
+    public Student(String name, float gpa) {
         this.name = name;
-        this.age = age;
-        this.add = add;
-        this.diem = diem;
-        this.gender = gender;
-    }
-    //contructor khong co tham so 
-    public  Student(){
-
+        this.gpa = gpa;
     }
 
-    public Student(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    //Funtion co the tra ve
     public String getName() {
         return name;
     }
@@ -35,36 +17,22 @@ public class Student {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public float getGpa() {
+        return gpa;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setGpa(float gpa) {
+        this.gpa = gpa;
     }
 
-    public String getAdd() {
-        return add;
+    //Kiem tra do truot
+    public boolean kiemTra(){
+        if(gpa >= 1.5){
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public void setAdd(String add) {
-        this.add = add;
-    }
 
-    public float getDiem() {
-        return diem;
-    }
-
-    public void setDiem(float diem) {
-        this.diem = diem;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 }
-
