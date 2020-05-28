@@ -1,6 +1,7 @@
-package javabuoi4;
+package javabuoi4.baitap4_1;
 
-import java.sql.SQLOutput;
+import javabuoi4.baitap4_1.HinhChuNhat;
+
 import java.util.Scanner;
 
 public class TestHCN {

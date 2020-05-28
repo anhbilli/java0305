@@ -1,4 +1,4 @@
-package javabuoi4;
+package javabuoi4.baitap4_1;
 
 public class HinhChuNhat {
     private int width;
