@@ -52,7 +52,7 @@ public class StudentManagement {
         return inRaSVTruot;
     }
     //Dem tong so SV do
-    public int diemGPACao(){
+    public students diemGPACao(){
         float max = 0;
         String diemGPACao = " ";
         for(int i = 0; i < tongSV; i++){
@@ -61,7 +61,8 @@ public class StudentManagement {
                 diemGPACao = students[i].getName();
             }
         }
-            System.out.println("SV co GPA cao nhat la : "+diemGPACao);
+        return diemGPACao;
+
 
     }
     
