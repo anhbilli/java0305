@@ -24,8 +24,11 @@ public class TestSM {
         System.out.println(studentManagement.inRaSVDo());
         System.out.println(studentManagement.inRaSVTruot());
 
-        Student gpaMax = studentManagement.diemGPACao;
-        System.out.println("SV co GPA cao nha la: "+studentManagement.diemGPACao());
+        Student gpaMax = studentManagement.diemGPACao();
+        System.out.println("SV co GPA cao nha la: "+gpaMax.toString());
+
+        Student gpaMin = studentManagement.diemGPAMin();
+        System.out.println("SV co GPA nho nhat la:"+gpaMin.toString());
 
 
 

@@ -9,6 +9,9 @@ public class Student {
         this.gpa = gpa;
     }
 
+    public Student() {
+    }
+
     public String getName() {
         return name;
     }
@@ -32,6 +35,10 @@ public class Student {
         } else {
             return false;
         }
+    }
+
+    public String toString(){
+        return name +"-"+gpa;
     }
 
 

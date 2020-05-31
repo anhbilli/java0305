@@ -11,6 +11,10 @@ public class StudentManagement {
         this.tongSV = this.students.length;
     }
 
+    public StudentManagement() {
+    }
+
+
     public int getTongSV() {
         return tongSV;
     }
@@ -32,41 +36,53 @@ public class StudentManagement {
         for(int i = 0; i < tongSV; i++){
             if(students[i].kiemTra() == true){
                 sum += 1;
-            } else{
-                sum =sum + 0;
+            }
         }
-        int inRaSVDo = sum;
-        return inRaSVDo;
+
+        return sum;
     }
     //In ra DSach SV truot
     public int inRaSVTruot(){
-        int sum2 = 0;
+        int sum = 0;
         for(int i = 0; i < tongSV; i++){
             if(students[i].kiemTra() == false){
-                sum2 += 1;
-            } else{
-                sum2 =sum2 + 0;
+                sum += 1;
             }
-        }
-        int inRaSVTruot = sum2;
-        return inRaSVTruot;
+            }
+
+
+        return sum;
     }
     //Dem tong so SV do
-    public students diemGPACao(){
+    public Student diemGPACao(){
         float max = 0;
-        String diemGPACao = " ";
+        Student SV = new Student();
         for(int i = 0; i < tongSV; i++){
             if(students[i].getGpa() > max){
                 max = students[i].getGpa();
-                diemGPACao = students[i].getName();
+                SV = students[i];
             }
         }
-        return diemGPACao;
+        return SV;
 
 
     }
     
     //Dem tong so SV truot
+    public Student diemGPAMin(){
+        float min = students[0].getGpa();
+        Student SV = new Student();
+        SV = students[0] ;
+        for(int i = 1; i < tongSV; i++){
+            if(min > students[i].getGpa()){
+                min = students[i].getGpa();
+                SV = students[i];
+            }
+        }
+        return SV;
+
+
+    }
 
 
 }
